@@ -47,7 +47,7 @@ set(SOURCES_MINHOOK
   "src/trampoline.c"
 )
 
-if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+if(CMAKE_SIZEOF_VOID_P EQUAL 8 OR FORCE_USE_HDE64 EQUAL TRUE)
   set(SOURCES_HDE "src/hde/hde64.c")
 else()
   set(SOURCES_HDE "src/hde/hde32.c")
